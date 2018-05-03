@@ -1,0 +1,29 @@
+<div class="container" *ngIf="user">
+
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+    <label class="input-group-text" for="FirstName">First Name:</label></div>
+    <input [(ngModel)]="user.FirstName" name="FirstName" type=text class="form-control" id="FirstName"></div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <label class="input-group-text" for="Email">Last Name:</label></div>
+        <input [(ngModel)]="user.LastName" name="LastName" type=text class="form-control" id="LastName"></div>
+
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+        <label class="input-group-text" for="Email">Email:</label></div>
+        <input [(ngModel)]="user.Email" name="Email" type=text class="form-control" id="Email"></div>
+
+      <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+            <label class="input-group-text" for="IsAdmin">Admin?:</label></div>
+            <select [(ngModel)]="user.IsAdmin" name="IsAdmin" class="form-control" id="IsAdmin">
+            <option [ngValue]="true">Yes</option>
+            <option [ngValue]="false">No</option></select>
+            </div>
+  
+    <div>
+      <button (click)="save()" class="btn btn-primary">Save</button>   </div>
+  
+</div>
